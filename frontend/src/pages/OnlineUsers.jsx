@@ -29,9 +29,9 @@ function OnlineUsers() {
     console.log("after fff:", context.notification);
     return (
       <div className="py-8 h-screen overflow-y-scroll bg-gradient-to-r from-blue-500 to-teal-400">
-        <h3>First join with your chart Id</h3>
+        <h3 className="text-center font-medium text-red-600">chart Id taken join with another !</h3>
         <Link to={"/join"}>
-          <h3>join</h3>
+          <h3 className="text-center active:scale-x-90 active:scale-y-90 bg-emerald-600 p-2 text-sm text-white">join</h3>
         </Link>
       </div>
     );
