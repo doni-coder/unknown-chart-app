@@ -9,7 +9,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(
   cors({
-    origin: "*",
+    origin: ["https://unknown-chart.onrender.com"],
     credentials: true,
   })
 );
