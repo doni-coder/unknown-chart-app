@@ -38,7 +38,7 @@ export const ContextProvider = ({ children }) => {
     console.log("Effect running: context.userId changed to:", context.userId);
     if (context.userId) {
       const userId = context.userId;
-      const newSocket = io(process.env.URL, {
+      const newSocket = io("https://unknown-chart-app.onrender.com", {
         query: { userId },
       });
       setSocket(newSocket);
