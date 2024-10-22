@@ -23,7 +23,7 @@ function OnlineUsers() {
 
   console.log("afte:", context.notification);
 
-  if (context.notification.shouldNavigate === true) {
+  if (context.notification.shouldNavigate === false) {
     navigate("/join");
     console.log("join page");
     console.log("after fff:", context.notification);
