@@ -41,9 +41,11 @@ function OnlineUsers() {
     );
   }
 
-  context.loading ? (
+  return context.loading === true ? (
     <div className="py-8 h-screen overflow-y-scroll bg-gradient-to-r from-blue-500 to-teal-400">
-      <p className="mt-10 font-extrabold text-2xl text-center text-white">Loading...</p>
+      <p className="mt-10 font-extrabold text-2xl text-center text-white">
+        Loading...
+      </p>
     </div>
   ) : (
     <div className="py-8 h-screen overflow-y-scroll bg-gradient-to-r from-blue-500 to-teal-400">
