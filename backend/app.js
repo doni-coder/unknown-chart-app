@@ -19,7 +19,7 @@ app.use(
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "*",
+    origin: "https://unknown-chart.onrender.com",
     methods: ["GET", "POST"],
   },
 });
