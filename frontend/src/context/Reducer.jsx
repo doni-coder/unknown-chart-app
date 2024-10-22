@@ -51,6 +51,12 @@ const Reducer = (state, action) => {
         typing: action.payload,
       }
 
+    case "SET_LOADING":
+      return{
+        ...state,
+        loading: false,
+      }
+
     default:
       return {
         state,

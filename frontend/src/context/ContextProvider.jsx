@@ -29,6 +29,7 @@ export const ContextProvider = ({ children }) => {
       typing: false,
       recipientId: "",
     },
+    loading:true
   };
   const [socket, setSocket] = useState();
   const [message, setMessage] = useState();
@@ -58,6 +59,7 @@ export const ContextProvider = ({ children }) => {
       newSocket.on("user_joined", (data) => {
         reducer({ type: "SET_NOTIFICATION", payload: data });
         toast.success(data.message);
+        reducer({type:"SET_LOADING"})
       });
 
       newSocket.on("typing_msg", (data) => {

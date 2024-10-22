@@ -49,7 +49,7 @@ function ChatPage() {
         <MdPersonPin fontSize={45} color="white" />
         <h3 className="text-white ml-2 font-semibold">{id}</h3>
       </div>
-      <div className="pb-[70px]">
+      <div className="pb-[70px] pt-5">
         {personalMessage.map((message) => {
           return (
             <Bubble

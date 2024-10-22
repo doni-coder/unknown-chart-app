@@ -23,21 +23,29 @@ function OnlineUsers() {
 
   console.log("afte:", context.notification);
 
-  if (context.notification.shouldNavigate === false) {
+  if (context.notification.shouldNavigate === true) {
     navigate("/join");
     console.log("join page");
     console.log("after fff:", context.notification);
     return (
       <div className="py-8 h-screen overflow-y-scroll bg-gradient-to-r from-blue-500 to-teal-400">
-        <h3 className="text-center font-medium text-red-600">chart Id taken join with another !</h3>
-        <Link to={"/join"}>
-          <h3 className="text-center active:scale-x-90 active:scale-y-90 bg-emerald-600 p-2 text-sm text-white">join</h3>
+        <h3 className="text-center font-medium text-red-600">
+          chart Id taken join with another id !
+        </h3>
+        <Link className="ml-[50%] translate-x-[-50%,-50%] mt-5" to={"/join"}>
+          <button className="text-center rounded-md active:scale-x-90 active:scale-y-90 bg-emerald-400 py-1 px-5 text-xl  text-white">
+            &larr;
+          </button>
         </Link>
       </div>
     );
   }
 
-  return (
+  context.loading ? (
+    <div className="py-8 h-screen overflow-y-scroll bg-gradient-to-r from-blue-500 to-teal-400">
+      <p className="mt-10 font-extrabold text-2xl text-center text-white">Loading...</p>
+    </div>
+  ) : (
     <div className="py-8 h-screen overflow-y-scroll bg-gradient-to-r from-blue-500 to-teal-400">
       <div className="px-5 py-3">
         <div className="flex gap-3 items-center">
